@@ -546,7 +546,7 @@ public class Exporter {
             }
 
             //      ROIHandler.saveROIs(store);
-            //      w.setMetadataRetrieve(store);
+//            w.setMetadataRetrieve(store);
 
             // prompt for options
 
@@ -586,7 +586,7 @@ public class Exporter {
             }
 
             //Save ROI's
-            if (saveRoi){
+            if (saveRoi == true){
                 ROIHandler.saveROIs(store);
             }
             w.setMetadataRetrieve(store);
