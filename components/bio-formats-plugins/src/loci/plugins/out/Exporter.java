@@ -188,6 +188,7 @@ public class Exporter {
                                 "Would you like to replace it?", "Replace?",
                                 JOptionPane.YES_NO_OPTION, JOptionPane.WARNING_MESSAGE);
                 if (ret != JOptionPane.OK_OPTION) f = null;
+                if (ret == JOptionPane.OK_OPTION) f.delete();
             }
             if (f == null) Macro.abort();
             else {
@@ -223,6 +224,7 @@ public class Exporter {
                                         "Would you like to replace it?", "Replace?",
                                         JOptionPane.YES_NO_OPTION, JOptionPane.WARNING_MESSAGE);
                         if (ret1 != JOptionPane.OK_OPTION) f = null;
+                        if (ret1 == JOptionPane.OK_OPTION) f.delete();
                     }
 
                 }
