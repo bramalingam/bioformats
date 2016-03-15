@@ -107,6 +107,7 @@ public class ICSWriter extends FormatWriter {
     String order = meta.getPixelsDimensionOrder(series).getValue();
     int sizeZ = meta.getPixelsSizeZ(series).getValue().intValue();
     int sizeC = meta.getChannelCount(series);
+    int c1 = meta.getPixelsSizeC(series).getValue().intValue();
     if (rgbChannels <= sizeC) {
       sizeC /= rgbChannels;
     }
@@ -119,7 +120,7 @@ public class ICSWriter extends FormatWriter {
     int realIndex =
       FormatTools.getIndex(outputOrder, sizeZ, sizeC, sizeT, planes,
       coords[0], coords[1], coords[2]);
-
+    System.out.println(sizeZ + " sizeC: " + sizeC + " sizeC1: " + c1 + " sizeT: " + sizeT + " planes: " + planes + " Coords0: " + coords[0] + " Coords1: " + coords[1] + " Coords2: " + coords[2]);
     int sizeX = meta.getPixelsSizeX(series).getValue().intValue();
     int sizeY = meta.getPixelsSizeY(series).getValue().intValue();
     int pixelType =

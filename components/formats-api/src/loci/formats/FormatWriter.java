@@ -451,6 +451,7 @@ public abstract class FormatWriter extends FormatHandler
     int z = r.getPixelsSizeZ(series).getValue().intValue();
     int t = r.getPixelsSizeT(series).getValue().intValue();
     int c = r.getPixelsSizeC(series).getValue().intValue();
+    System.out.println("FormatWriter: SizeC: " + c);
     c /= r.getChannelSamplesPerPixel(series, 0).getValue().intValue();
     return z * c * t;
   }
